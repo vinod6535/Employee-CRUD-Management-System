@@ -81,6 +81,7 @@ function registrationData() {
 }
 
 //start returning data on page from localstorage
+
 var tableData = document.querySelector("#table-data");
 const getDataFromLocal = () => {
   tableData.innerHTML = "";
@@ -88,7 +89,7 @@ const getDataFromLocal = () => {
     tableData.innerHTML += `  
     <tr index='${index}'>
           <td>${index + 1}</td>
-          <td><img src="${data.profilePic}" width="40"></td>
+          <td  ><img src="${data.profilePic}" width="50" style="border-radius:50%"></td>
           <td>${data.id}</td>
           <td>${data.name}</td>
           <td>${data.l_name}</td>
@@ -96,7 +97,7 @@ const getDataFromLocal = () => {
           <td>${data.officeCode}</td>
           <td>${data.jobTitle}</td>
           <td>
-            <button class="edit-btn"><i class="fa fa-eye"></i></button>
+            <button class="edit-btn"><i class="fa fa-pencil"></i></button>
             <button class="del-btn" style="background-color: #EE534F;"><i class="fa fa-trash"></i></button></td>
          </tr>   
     `;
@@ -267,3 +268,5 @@ dellAllBtn.addEventListener("click", () => {
     swal("Check The Box", "Please check the box to delete data", "warning");
   }
 });
+
+
